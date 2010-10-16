@@ -33,20 +33,26 @@ void draw() {
   r += 3;
   g += 2;
   b += 1;
-  background(nToC(r),nToC(g),nToC(b));
+  background(0);
+  //background(nToC(r),nToC(g),nToC(b));
 
   //Draw paths between the center and each point
   //Skip for now.
 
-  fill(255);
+  fill(nToC(r),nToC(g),nToC(b));
   //Draw each point
   for (int a = 0; a < destinations.size(); a++ ) {
     Point p = (Point)destinations[a];
     drawCircle(p);
   }
 
+  while (destinations.size() > 30) {
+    destinations.remove(0);
+  }
+
+  fill(255)
   //Draw the center
-  drawCircle(center);
+  //drawCircle(center);
 
   fill(0);
   //move the Mouse
@@ -55,6 +61,7 @@ void draw() {
   } else {
     cursor_location.x += (cursor_target.x - cursor_location.x)/10.0
       cursor_location.y += (cursor_target.y - cursor_location.y)/10.0
+    destinations.push(new Point( cursor_location.x, cursor_location.y ) );
   }
 
   //Draw the mouse 
