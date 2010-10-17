@@ -1,0 +1,13 @@
+html, body{
+  background-color:#333333;
+  height: 100%;
+}
+#content {
+  font-family:"gill sans",sans-serif;
+  background-color:#FFFFFF;
+  height: 100%;
+}
+.title {
+  font-family:"palatino", serif;
+  background-color:#666699;
+}
