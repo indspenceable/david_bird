@@ -8,6 +8,8 @@ ArrayList al;
 draw_width = width - 30;
 draw_height = height - 10;
 
+int FADE_DISTANCE = 60;
+
 void setup() {
 
   al = new ArrayList();
@@ -33,11 +35,11 @@ void backgroundColor(int tick, int x) {
   g = nToC(2*tick);
   b = nToC(3*tick);
 
-  if (x < 30) {
+  if (x < FADE_DISTANCE) {
     //fade
-    r += ((30-x)/30)*(255-r);
-    g += ((30-x)/30)*(255-g);
-    b += ((30-x)/30)*(255-b);
+    r += ((FADE_DISTANCE-x)/FADE_DISTANCE)*(255-r);
+    g += ((FADE_DISTANCE-x)/FADE_DISTANCE)*(255-g);
+    b += ((FADE_DISTANCE-x)/FADE_DISTANCE)*(255-b);
   }
   fill(r,g,b);
 }
@@ -51,8 +53,8 @@ void draw() {
   }
   for (int x = 0; x < total; x++ ) {
     backgroundColor(tick, x);
-    ellipse(SPACING*x,al[(x+offset)%total],2,2);
-    ellipse(SPACING*x-5,al[(x+5+offset)%total],2,2);
+    ellipse(10+SPACING*x,al[(x+offset)%total],2,2);
+    ellipse(10+SPACING*x+15,al[(x+5+offset)%total],2,2);
   }
 }
 
