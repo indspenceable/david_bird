@@ -1,13 +1,14 @@
 html, body{
   background-color:#333333;
   height: 100%;
+  padding:0px;
+  margin:0px;
 }
 #content {
   font-family:"gill sans",sans-serif;
   background-color:#FFFFFF;
   height: 100%;
 }
-.title {
+.title, #nav {
   font-family:"palatino", serif;
-  background-color:#666699;
 }

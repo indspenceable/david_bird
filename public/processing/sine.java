@@ -2,6 +2,7 @@ int offset;
 int total;
 int counter;
 int tick;
+int phase;
 int SPACING = 1;
 ArrayList al;
 
@@ -22,6 +23,7 @@ void setup() {
   }
   total = al.size();
   tick = 0;
+  phase = 0;
   counter = 0;
   noStroke();
 }
@@ -50,11 +52,13 @@ void draw() {
   if (counter++%30 == 29) {
     counter = 0;
     tick++;
+    phase += 2;
   }
   for (int x = 0; x < total; x++ ) {
     backgroundColor(tick, x);
     ellipse(10+SPACING*x,al[(x+offset)%total],2,2);
-    ellipse(10+SPACING*x+15,al[(x+5+offset)%total],2,2);
+    //backgroundColor(tick+50, x);
+    ellipse(10+SPACING*x,al[(x+offset+4)%total],2,2);
   }
 }
 
