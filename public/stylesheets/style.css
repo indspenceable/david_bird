@@ -6,8 +6,8 @@ html, body{
 }
 #content {
   font-family:"gill sans",sans-serif;
+  height:100%;
   background-color:#FFFFFF;
-  height: 100%;
 }
 .title, #nav {
   font-family:"palatino", serif;

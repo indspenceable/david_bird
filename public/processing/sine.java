@@ -11,8 +11,18 @@ draw_height = height - 10;
 
 int FADE_DISTANCE = 60;
 
+var ctx;
+var font;
+var fontsize;
+var y;
 void setup() {
+  //Setup the font
+  ctx = $('canvas')[0].getContext('2d');
+  CanvasTextFunctions.enable(ctx);
+  font = "sans";
+  fontsize = 12;
 
+  font = loadFont("helvetica"); 
   al = new ArrayList();
   int _tick = 0;
   while (al.size() < draw_width/SPACING) {
@@ -48,6 +58,7 @@ void backgroundColor(int tick, int x) {
 
 void draw() {
   background(255);
+
   offset++;
   if (counter++%30 == 29) {
     counter = 0;
@@ -56,9 +67,14 @@ void draw() {
   }
   for (int x = 0; x < total; x++ ) {
     backgroundColor(tick, x);
-    ellipse(10+SPACING*x,al[(x+offset)%total],2,2);
+    //ellipse(10+SPACING*x,al[(x+offset)%total],2,2);
     //backgroundColor(tick+50, x);
-    ellipse(10+SPACING*x,al[(x+offset+4)%total],2,2);
+    ellipse(10+SPACING*x,(al[(x+offset+4)%total]+al[(x+phase+offset)%total])/2,2,2);
   }
+  rotate(3*PI/2);
+  translate(-150,-40); 
+
+  ctx.drawText( font, 20, 0, 60, "David Bird");
+
 }
 
