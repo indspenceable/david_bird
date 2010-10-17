@@ -74,7 +74,7 @@ void draw() {
   rotate(3*PI/2);
   translate(-150,-40); 
 
-  ctx.drawText( font, 20, 0, 60, "David Bird");
+  ctx.drawText( font, 20, 0, 60, "david bird");
 
 }
 
