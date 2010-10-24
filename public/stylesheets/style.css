@@ -25,6 +25,9 @@ html, body{
   margin-left:auto;
   margin-right:auto;
 }
+.navbutton {
+  margin-left: 55px;
+}
 #content {
   float: right;
   width: 50%;
