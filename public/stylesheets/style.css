@@ -7,14 +7,14 @@ html, body{
   font-family: "Verdana", sans-serif;
 }
 #container {
-  background-color: #AAAAAA;
+  background-color: #FFFFFF;
   height:100%;
-  width: 700px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 #column {
-  background-color: #AAAAAA;
+  background-color: #FFFFFF;
 }
 #navigation {
   float: left;
