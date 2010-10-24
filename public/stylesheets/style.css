@@ -4,6 +4,7 @@ html, body{
   padding:0px;
   margin:0px;
   width: 100%;
+  font-family: "Verdana", sans-serif;
 }
 #container {
   background-color: #AAAAAA;
