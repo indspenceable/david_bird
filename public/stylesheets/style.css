@@ -1,14 +1,19 @@
 html, body{
-  background-color:#333333;
+  /*background-color:#333333;*/
   height: 100%;
   padding:0px;
   margin:0px;
 }
-#content {
-  font-family:"gill sans",sans-serif;
-  height:100%;
-  background-color:#FFFFFF;
+#main {
+  width: 900 px;
+  background-color:#DDDDDD;
 }
-.title, #nav {
-  font-family:"palatino", serif;
+#left {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+#right{
+  float: right;
+  width: 50%;
 }
