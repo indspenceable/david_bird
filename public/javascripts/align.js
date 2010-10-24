@@ -31,11 +31,11 @@ function setContent() {
   if (document.getElementById) {
     var windowHeight = getWindowHeight();
     if (windowHeight > 0) {
-      var contentElement = document.getElementById('header');
+      var contentElement = document.getElementById('navbar');
       var contentHeight = contentElement.offsetHeight;
       if (windowHeight - contentHeight > 0) {
         contentElement.style.position = 'relative';
-        contentElement.style.top = f_scrollTop() + ((windowHeight / 2) - (contentHeight / 2)) + 'px';
+        contentElement.style.top = f_scrollTop() + ((windowHeight * (1.0 / 2)) - (contentHeight / 2)) + 'px';
       }
       else {
         contentElement.style.position = 'static';
