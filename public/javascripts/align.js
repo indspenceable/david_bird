@@ -35,7 +35,7 @@ function setContent() {
       var contentHeight = contentElement.offsetHeight;
       if (windowHeight - contentHeight > 0) {
         contentElement.style.position = 'relative';
-        contentElement.style.top = f_scrollTop() + ((windowHeight * (2.0 / 3)) - (contentHeight / 2)) + 'px';
+        contentElement.style.top = f_scrollTop() + ((windowHeight * (1 / 2)) - (contentHeight / 2)) + 'px';
       }
       else {
         contentElement.style.position = 'static';

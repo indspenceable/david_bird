@@ -1,9 +1,14 @@
+html {
+  overflow-y: scroll;
+}
+
 html, body{
   background-color:#FFF;
   height: 100%;
   padding:0px;
   margin:0px;
   width: 100%;
+  color: #BFBFBF;
   font-family: "Verdana", sans-serif;
 }
 #container {
@@ -22,14 +27,12 @@ html, body{
   height: 100%;
 }
 #navbar {
-  width:100px;
+  width:150px;
   float:right;
   background-color:
 }
 .navtitle {
   margin-left:-55px;
-}
-.navbutton {
 }
 #content {
   float: right;
