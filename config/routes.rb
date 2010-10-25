@@ -1,8 +1,7 @@
 DavidBird::Application.routes.draw do
-  get "site/index"
-
-  get "site/bio"
   match 'bio' => 'site#bio'
+  match 'work' => 'site#work'
+  match 'contact' => 'site#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
