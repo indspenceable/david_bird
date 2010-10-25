@@ -22,8 +22,10 @@
             <div class="navbutton" ><%= link_to image_tag('contact.png', { :mouseover => 'contact_mouseover.png', :height => "19"}), 'contact' %></br></div>
           </div>
         </div>
-        <div id="content">
-          <%= yield %>
+        <div id="content_wrapper">
+          <div id="content">
+            <%= yield %>
+          </div>
         </div>
         <div id="footer">
         </div>

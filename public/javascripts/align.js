@@ -27,11 +27,11 @@ function f_scrollTop() {
   }
   return ScrollTop;
 }
-function setContent() {
+function setContent( el ) {
   if (document.getElementById) {
     var windowHeight = getWindowHeight();
     if (windowHeight > 0) {
-      var contentElement = document.getElementById('navbar');
+      var contentElement = document.getElementById(el);
       var contentHeight = contentElement.offsetHeight;
       if (windowHeight - contentHeight > 0) {
         contentElement.style.position = 'relative';
@@ -44,11 +44,13 @@ function setContent() {
   }
 }
 window.onload = function() {
-  setContent();
+  setContent('navbar');
+  setContent('content');
 }
 window.onresize = function() {
-  setContent();
+  setContent('navbar');
+  setContent('content');
 }
 window.onscroll = function() {
-  setContent();
+  setContent('navbar');
 }

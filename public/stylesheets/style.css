@@ -9,12 +9,12 @@ html, body{
   margin:0px;
   width: 100%;
   color: #BFBFBF;
-  font-family: "Verdana", sans-serif;
+  font-family: "Palatino", serif;
 }
 #container {
   /*background-color: #FFFFFF;*/
   height:100%;
-  width: 900px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -23,7 +23,7 @@ html, body{
 }
 #navigation {
   float: left;
-  width: 50%;
+  width: 150px;
   height: 100%;
 }
 #navbar {
@@ -34,10 +34,14 @@ html, body{
 .navtitle {
   margin-left:-55px;
 }
-#content {
+#content_wrapper {
   float: right;
-  margin-top: 50px;
-  width: 50%;
+  margin-top: 10px;
+  width: 450px;
+}
+#content {
+  /*margin-top: 0px;*/
+  text-align: center;
 }
 #header {
 
