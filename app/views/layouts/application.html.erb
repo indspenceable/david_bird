@@ -17,9 +17,9 @@
         <div id="navigation">
           <div id="navbar">
             <div class="navtitle"><%= image_tag 'davidbird.png', {:height => "27"} %></br></div>
-            <div class="navbutton" ><%= link_to( image_tag('bio.png', {:mouseover => 'bio_mouseover.png', :height => "19"} ), 'bio')%></br></div>
-            <div class="navbutton" ><%= link_to image_tag('work.png', {:mouseover => 'work_mouseover.png', :height => "19"}), 'work' %></br></div>
-            <div class="navbutton" ><%= link_to image_tag('contact.png', { :mouseover => 'contact_mouseover.png', :height => "19"}), 'contact' %></br></div>
+            <div class="navbutton" ><%= link_to( image_tag((@current != :bio)?'bio.png' : 'bio_mouseover.png', {:mouseover => 'bio_mouseover.png', :height => "19"} ), 'bio')%></br></div>
+            <div class="navbutton" ><%= link_to image_tag((@current != :work)?'work.png' : 'work_mouseover.png', {:mouseover => 'work_mouseover.png', :height => "19"}), 'work' %></br></div>
+            <div class="navbutton" ><%= link_to image_tag((@current != :contact)?'contact.png' : 'contact_mouseover.png', { :mouseover => 'contact_mouseover.png', :height => "19"}), 'contact' %></br></div>
           </div>
         </div>
         <div id="content_wrapper">
